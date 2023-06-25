@@ -1,13 +1,8 @@
-from rest_framework import generics
+from rest_framework import viewsets
 from .models import Aluno
 from .AlunoSerializers import AlunoSerializer
 
 
-class AlunoList(generics.ListCreateAPIView):
-    queryset = Aluno.objects.all()
-    serializer_class = AlunoSerializer
-
-
-class AlunoDetail(generics.RetrieveUpdateDestroyAPIView):
+class AlunoView(viewsets.ModelViewSet):
     queryset = Aluno.objects.all()
     serializer_class = AlunoSerializer

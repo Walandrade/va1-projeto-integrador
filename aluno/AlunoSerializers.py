@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Aluno
 
 
-class Aluno(serializers.ModelSerializer):
+class AlunoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Aluno

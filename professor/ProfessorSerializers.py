@@ -6,4 +6,4 @@ class Professor(serializers.ModelSerializer):
 
     class Meta:
         model = Professor
-        fields = ['nome', 'sexo', 'telefone']
+        fields = ['nome', 'sexo', 'registro']
