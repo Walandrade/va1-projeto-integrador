@@ -40,13 +40,11 @@ INSTALLED_APPS = [
     'aluno',
     'curso',
     'detalhe_curso',
-    'detalhe-disciplina',
     'detalhe_turma',
     'disciplina',
     'professor',
     'turma',
     'rest_framework',
-    'core',
   
 
     

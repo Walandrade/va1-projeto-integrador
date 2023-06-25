@@ -1,12 +1,9 @@
-from rest_framework  import serializers
-from .models import aluno
+from rest_framework import serializers
+from .models import Aluno
 
-class AlunoSerializers(serializers.models):
-    class Meta: 
-        model = aluno
-        fields = [
-            'name' 
-            'sexo' 
-            'matricula'
-            'dataNascimento'
-        ]
+
+class Aluno(serializers.ModelSerializer):
+
+    class Meta:
+        model = Aluno
+        fields = ['nome', 'sexo', 'telefone']

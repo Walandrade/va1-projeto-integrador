@@ -1,20 +1,9 @@
-#!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
-from aluno.models import models
+import os
+import sys
 
-from aluno.AlunoSerializers import AlunoSerializers
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
+if __name__ == "__main__":
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "va2.settings")
 
-models = models(nome='Paul', sexo='Van Dyke', matricula="")
-models.save()
+    from django.core.management import execute_from_command_line
 
-models = models(nome='Regis', sexo='Santos', matricula="")
-models.save()
-
-serializer = AlunoSerializers(models)
-serializer.data
-
-content = JSONRenderer().render(serializer.data)
-content
-
+    execute_from_command_line(sys.argv)

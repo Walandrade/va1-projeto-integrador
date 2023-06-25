@@ -1,5 +1,5 @@
 from django.db import models
 
-class detalhe_curso(models.Model):
+class Detalhe_Curso(models.Model):
     codigoCurso = models.IntegerField()
     codigoTurma = models.IntegerField()
